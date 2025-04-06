@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Name Manipulation</title>
+</head>
+<body>
+    <h1>Name Manipulation Program</h1>
+    <pre id="output"></pre>
+
+    <script>
+    
+        let names = ["Johan", "Jane", "Doe", "Alice", "Bob"];
+
+    
+        let output = "Original names:\n";
+
+        
+        names.forEach(name => {
+            output += name + "\n";
+        });
+
+    
+        names.push("Eve");
+
+        
+        names.sort();
+
+        
+        if (names.includes("Alice")) {
+            output += "Alice is present\n";
+        } else {
+            output += "Alice is not present\n";
+        }
+
+        
+        let uppercaseNames = names.map(name => name.toUpperCase());
+
+        
+        output += "Uppercase names:\n";
+        uppercaseNames.forEach(name => {
+            output += name + "\n";
+        });
+
+        
+        document.getElementById("output").textContent = output;
+    </script>
+</body>
+</html>
